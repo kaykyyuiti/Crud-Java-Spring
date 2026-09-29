@@ -1,6 +1,6 @@
 package com.ufc.cadastro_lutadores.infrastructure.repository;
 
-import com.template.model.entity.Lutador;
+import com.ufc.cadastro_lutadores.infrastructure.entity.Lutador;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;
 

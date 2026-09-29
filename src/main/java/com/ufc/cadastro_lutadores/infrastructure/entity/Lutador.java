@@ -1,4 +1,4 @@
-package com.template.model.entity;
+package com.ufc.cadastro_lutadores.infrastructure.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
