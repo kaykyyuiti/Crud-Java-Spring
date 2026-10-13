@@ -1,5 +1,6 @@
 package com.ufc.cadastro_lutadores.infrastructure.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -28,6 +29,7 @@ public class Lutador {
     @Column(name = "idade")
     private Integer idade;
 
+    @JsonProperty("sequenciaVitorias")
     @Column(name = "sequencia_vitorias")
     private Integer sequenciaVitorias;
 }

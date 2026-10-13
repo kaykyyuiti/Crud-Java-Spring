@@ -2,20 +2,19 @@ package com.ufc.cadastro_lutadores.controller;
 
 import com.ufc.cadastro_lutadores.business.LutadorService;
 import com.ufc.cadastro_lutadores.infrastructure.entity.Lutador;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/Lutador")
+@RequestMapping("/lutador")
 @RequiredArgsConstructor
-
 public class LutadorController {
 
     private final LutadorService lutadorService;
 
     @PostMapping
-    public ResponseEntity<Void> salvarLutador(@RequestBody Lutador lutador){
+    public ResponseEntity<Void> salvarLutador(@RequestBody Lutador lutador) {
         lutadorService.salvarLutador(lutador);
         return ResponseEntity.ok().build();
     }
@@ -32,11 +31,10 @@ public class LutadorController {
     }
 
     @PutMapping
-    public ResponseEntity<Void> atualizarUsuarioPorId(@RequestBody Lutador lutador,
-                                                        @RequestParam Integer id) {
+    public ResponseEntity<Void> atualizarUsuarioPorId(
+            @RequestBody Lutador lutador,
+            @RequestParam Integer id) {
         lutadorService.atualizarLutadorPorId(id, lutador);
         return ResponseEntity.ok().build();
     }
-
-
 }
